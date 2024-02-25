@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 25, 2024 at 12:48 PM
+-- Generation Time: Feb 26, 2024 at 12:42 AM
 -- Wersja serwera: 10.4.28-MariaDB
 -- Wersja PHP: 8.2.4
 
@@ -122,7 +122,8 @@ INSERT INTO `addresses` (`id`, `name`, `surname`, `street`, `city`, `zip_code`, 
 (828, 'd', 'd', 'd', 'd', '22-222', 'd', NULL, 'order', '2024-02-20 09:13:32', '2024-02-20 09:13:32', 111111111, 72),
 (830, 'd', 'd', 'd', 'd', '22-222', 'd', NULL, 'order', '2024-02-20 11:36:25', '2024-02-20 11:36:25', 111111111, 72),
 (833, 'f', 'f', 'f', 'f', '44-444', 'ff', 0, 'none', '2024-02-21 11:51:53', '2024-02-21 12:03:36', 444444444, 72),
-(834, 'd', 'd', 'd', 'd', '22-222', 'd', 1, 'none', '2024-02-21 12:01:34', '2024-02-21 12:03:36', 222222222, 72);
+(834, 'd', 'd', 'd', 'd', '22-222', 'd', 1, 'none', '2024-02-21 12:01:34', '2024-02-21 12:03:36', 222222222, 72),
+(835, 'd', 'd', 'd', 'dd', '33-333', 'd', 1, 'none', '2024-02-25 14:11:58', '2024-02-25 14:11:58', 333333333, 73);
 
 -- --------------------------------------------------------
 
@@ -144,7 +145,7 @@ CREATE TABLE `categories` (
 
 INSERT INTO `categories` (`id`, `name`, `status`, `created_at`, `updated_at`) VALUES
 (9, 'Inne', 'enable', '2023-12-07 20:32:28', '2023-12-11 12:32:30'),
-(14, 'Warzywa', 'enable', '2023-12-11 12:37:56', '2023-12-11 12:38:10'),
+(14, 'Warzywa', 'enable', '2023-12-11 12:37:56', '2024-02-25 12:54:52'),
 (15, 'Napoje', 'enable', '2024-01-05 15:25:44', '2024-01-05 15:25:44'),
 (16, 'Pieczywo', 'enable', '2024-01-06 22:38:19', '2024-01-06 22:38:19'),
 (17, 'Nabiał', 'enable', '2024-01-06 22:38:28', '2024-01-06 22:38:28'),
@@ -377,7 +378,9 @@ INSERT INTO `jobs` (`id`, `queue`, `payload`, `attempts`, `reserved_at`, `availa
 (890, 'default', '{\"uuid\":\"19083468-6ed2-41d6-9cca-b6b274b43272\",\"displayName\":\"App\\\\Listeners\\\\SendActivatedConfirmationEmail\",\"job\":\"Illuminate\\\\Queue\\\\CallQueuedHandler@call\",\"maxTries\":null,\"maxExceptions\":null,\"failOnTimeout\":false,\"backoff\":null,\"timeout\":null,\"retryUntil\":null,\"data\":{\"commandName\":\"Illuminate\\\\Events\\\\CallQueuedListener\",\"command\":\"O:36:\\\"Illuminate\\\\Events\\\\CallQueuedListener\\\":19:{s:5:\\\"class\\\";s:44:\\\"App\\\\Listeners\\\\SendActivatedConfirmationEmail\\\";s:6:\\\"method\\\";s:6:\\\"handle\\\";s:4:\\\"data\\\";a:1:{i:0;O:32:\\\"App\\\\Events\\\\ShoppingListActivated\\\":1:{s:13:\\\"shopping_list\\\";O:45:\\\"Illuminate\\\\Contracts\\\\Database\\\\ModelIdentifier\\\":5:{s:5:\\\"class\\\";s:24:\\\"App\\\\Models\\\\Shopping_list\\\";s:2:\\\"id\\\";i:631;s:9:\\\"relations\\\";a:0:{}s:10:\\\"connection\\\";s:5:\\\"mysql\\\";s:15:\\\"collectionClass\\\";N;}}}s:5:\\\"tries\\\";N;s:13:\\\"maxExceptions\\\";N;s:7:\\\"backoff\\\";N;s:10:\\\"retryUntil\\\";N;s:7:\\\"timeout\\\";N;s:17:\\\"shouldBeEncrypted\\\";b:0;s:3:\\\"job\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:19:\\\"chainCatchCallbacks\\\";N;s:5:\\\"delay\\\";N;s:11:\\\"afterCommit\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}\"}}', 0, NULL, 1708422140, 1708422140),
 (891, 'default', '{\"uuid\":\"54fa810d-d52a-4047-ba9d-d00b7ba3fb3d\",\"displayName\":\"App\\\\Listeners\\\\SendActivatedConfirmationEmail\",\"job\":\"Illuminate\\\\Queue\\\\CallQueuedHandler@call\",\"maxTries\":null,\"maxExceptions\":null,\"failOnTimeout\":false,\"backoff\":null,\"timeout\":null,\"retryUntil\":null,\"data\":{\"commandName\":\"Illuminate\\\\Events\\\\CallQueuedListener\",\"command\":\"O:36:\\\"Illuminate\\\\Events\\\\CallQueuedListener\\\":19:{s:5:\\\"class\\\";s:44:\\\"App\\\\Listeners\\\\SendActivatedConfirmationEmail\\\";s:6:\\\"method\\\";s:6:\\\"handle\\\";s:4:\\\"data\\\";a:1:{i:0;O:32:\\\"App\\\\Events\\\\ShoppingListActivated\\\":1:{s:13:\\\"shopping_list\\\";O:45:\\\"Illuminate\\\\Contracts\\\\Database\\\\ModelIdentifier\\\":5:{s:5:\\\"class\\\";s:24:\\\"App\\\\Models\\\\Shopping_list\\\";s:2:\\\"id\\\";i:631;s:9:\\\"relations\\\";a:0:{}s:10:\\\"connection\\\";s:5:\\\"mysql\\\";s:15:\\\"collectionClass\\\";N;}}}s:5:\\\"tries\\\";N;s:13:\\\"maxExceptions\\\";N;s:7:\\\"backoff\\\";N;s:10:\\\"retryUntil\\\";N;s:7:\\\"timeout\\\";N;s:17:\\\"shouldBeEncrypted\\\";b:0;s:3:\\\"job\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:19:\\\"chainCatchCallbacks\\\";N;s:5:\\\"delay\\\";N;s:11:\\\"afterCommit\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}\"}}', 0, NULL, 1708422697, 1708422697),
 (892, 'default', '{\"uuid\":\"03832aef-74a3-4db9-81ea-a22eb71153fe\",\"displayName\":\"App\\\\Listeners\\\\SendActivatedConfirmationEmail\",\"job\":\"Illuminate\\\\Queue\\\\CallQueuedHandler@call\",\"maxTries\":null,\"maxExceptions\":null,\"failOnTimeout\":false,\"backoff\":null,\"timeout\":null,\"retryUntil\":null,\"data\":{\"commandName\":\"Illuminate\\\\Events\\\\CallQueuedListener\",\"command\":\"O:36:\\\"Illuminate\\\\Events\\\\CallQueuedListener\\\":19:{s:5:\\\"class\\\";s:44:\\\"App\\\\Listeners\\\\SendActivatedConfirmationEmail\\\";s:6:\\\"method\\\";s:6:\\\"handle\\\";s:4:\\\"data\\\";a:1:{i:0;O:32:\\\"App\\\\Events\\\\ShoppingListActivated\\\":1:{s:13:\\\"shopping_list\\\";O:45:\\\"Illuminate\\\\Contracts\\\\Database\\\\ModelIdentifier\\\":5:{s:5:\\\"class\\\";s:24:\\\"App\\\\Models\\\\Shopping_list\\\";s:2:\\\"id\\\";i:631;s:9:\\\"relations\\\";a:0:{}s:10:\\\"connection\\\";s:5:\\\"mysql\\\";s:15:\\\"collectionClass\\\";N;}}}s:5:\\\"tries\\\";N;s:13:\\\"maxExceptions\\\";N;s:7:\\\"backoff\\\";N;s:10:\\\"retryUntil\\\";N;s:7:\\\"timeout\\\";N;s:17:\\\"shouldBeEncrypted\\\";b:0;s:3:\\\"job\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:19:\\\"chainCatchCallbacks\\\";N;s:5:\\\"delay\\\";N;s:11:\\\"afterCommit\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}\"}}', 0, NULL, 1708422721, 1708422721),
-(893, 'default', '{\"uuid\":\"0e7621d5-fc89-48c2-8802-7caf7619d6ce\",\"displayName\":\"App\\\\Listeners\\\\SendActivatedConfirmationEmail\",\"job\":\"Illuminate\\\\Queue\\\\CallQueuedHandler@call\",\"maxTries\":null,\"maxExceptions\":null,\"failOnTimeout\":false,\"backoff\":null,\"timeout\":null,\"retryUntil\":null,\"data\":{\"commandName\":\"Illuminate\\\\Events\\\\CallQueuedListener\",\"command\":\"O:36:\\\"Illuminate\\\\Events\\\\CallQueuedListener\\\":19:{s:5:\\\"class\\\";s:44:\\\"App\\\\Listeners\\\\SendActivatedConfirmationEmail\\\";s:6:\\\"method\\\";s:6:\\\"handle\\\";s:4:\\\"data\\\";a:1:{i:0;O:32:\\\"App\\\\Events\\\\ShoppingListActivated\\\":1:{s:13:\\\"shopping_list\\\";O:45:\\\"Illuminate\\\\Contracts\\\\Database\\\\ModelIdentifier\\\":5:{s:5:\\\"class\\\";s:24:\\\"App\\\\Models\\\\Shopping_list\\\";s:2:\\\"id\\\";i:631;s:9:\\\"relations\\\";a:0:{}s:10:\\\"connection\\\";s:5:\\\"mysql\\\";s:15:\\\"collectionClass\\\";N;}}}s:5:\\\"tries\\\";N;s:13:\\\"maxExceptions\\\";N;s:7:\\\"backoff\\\";N;s:10:\\\"retryUntil\\\";N;s:7:\\\"timeout\\\";N;s:17:\\\"shouldBeEncrypted\\\";b:0;s:3:\\\"job\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:19:\\\"chainCatchCallbacks\\\";N;s:5:\\\"delay\\\";N;s:11:\\\"afterCommit\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}\"}}', 0, NULL, 1708422779, 1708422779);
+(893, 'default', '{\"uuid\":\"0e7621d5-fc89-48c2-8802-7caf7619d6ce\",\"displayName\":\"App\\\\Listeners\\\\SendActivatedConfirmationEmail\",\"job\":\"Illuminate\\\\Queue\\\\CallQueuedHandler@call\",\"maxTries\":null,\"maxExceptions\":null,\"failOnTimeout\":false,\"backoff\":null,\"timeout\":null,\"retryUntil\":null,\"data\":{\"commandName\":\"Illuminate\\\\Events\\\\CallQueuedListener\",\"command\":\"O:36:\\\"Illuminate\\\\Events\\\\CallQueuedListener\\\":19:{s:5:\\\"class\\\";s:44:\\\"App\\\\Listeners\\\\SendActivatedConfirmationEmail\\\";s:6:\\\"method\\\";s:6:\\\"handle\\\";s:4:\\\"data\\\";a:1:{i:0;O:32:\\\"App\\\\Events\\\\ShoppingListActivated\\\":1:{s:13:\\\"shopping_list\\\";O:45:\\\"Illuminate\\\\Contracts\\\\Database\\\\ModelIdentifier\\\":5:{s:5:\\\"class\\\";s:24:\\\"App\\\\Models\\\\Shopping_list\\\";s:2:\\\"id\\\";i:631;s:9:\\\"relations\\\";a:0:{}s:10:\\\"connection\\\";s:5:\\\"mysql\\\";s:15:\\\"collectionClass\\\";N;}}}s:5:\\\"tries\\\";N;s:13:\\\"maxExceptions\\\";N;s:7:\\\"backoff\\\";N;s:10:\\\"retryUntil\\\";N;s:7:\\\"timeout\\\";N;s:17:\\\"shouldBeEncrypted\\\";b:0;s:3:\\\"job\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:19:\\\"chainCatchCallbacks\\\";N;s:5:\\\"delay\\\";N;s:11:\\\"afterCommit\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}\"}}', 0, NULL, 1708422779, 1708422779),
+(894, 'default', '{\"uuid\":\"bd5c0771-c383-4add-82df-b33cc46217a9\",\"displayName\":\"App\\\\Listeners\\\\SendActivatedConfirmationEmail\",\"job\":\"Illuminate\\\\Queue\\\\CallQueuedHandler@call\",\"maxTries\":null,\"maxExceptions\":null,\"failOnTimeout\":false,\"backoff\":null,\"timeout\":null,\"retryUntil\":null,\"data\":{\"commandName\":\"Illuminate\\\\Events\\\\CallQueuedListener\",\"command\":\"O:36:\\\"Illuminate\\\\Events\\\\CallQueuedListener\\\":19:{s:5:\\\"class\\\";s:44:\\\"App\\\\Listeners\\\\SendActivatedConfirmationEmail\\\";s:6:\\\"method\\\";s:6:\\\"handle\\\";s:4:\\\"data\\\";a:1:{i:0;O:32:\\\"App\\\\Events\\\\ShoppingListActivated\\\":1:{s:13:\\\"shopping_list\\\";O:45:\\\"Illuminate\\\\Contracts\\\\Database\\\\ModelIdentifier\\\":5:{s:5:\\\"class\\\";s:24:\\\"App\\\\Models\\\\Shopping_list\\\";s:2:\\\"id\\\";i:629;s:9:\\\"relations\\\";a:0:{}s:10:\\\"connection\\\";s:5:\\\"mysql\\\";s:15:\\\"collectionClass\\\";N;}}}s:5:\\\"tries\\\";N;s:13:\\\"maxExceptions\\\";N;s:7:\\\"backoff\\\";N;s:10:\\\"retryUntil\\\";N;s:7:\\\"timeout\\\";N;s:17:\\\"shouldBeEncrypted\\\";b:0;s:3:\\\"job\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:19:\\\"chainCatchCallbacks\\\";N;s:5:\\\"delay\\\";N;s:11:\\\"afterCommit\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}\"}}', 0, NULL, 1708865397, 1708865397),
+(895, 'default', '{\"uuid\":\"6928c36f-aae3-4e6c-bf44-60139b61d7cf\",\"displayName\":\"App\\\\Listeners\\\\SendPurchaseConfirmationEmail\",\"job\":\"Illuminate\\\\Queue\\\\CallQueuedHandler@call\",\"maxTries\":null,\"maxExceptions\":null,\"failOnTimeout\":false,\"backoff\":null,\"timeout\":null,\"retryUntil\":null,\"data\":{\"commandName\":\"Illuminate\\\\Events\\\\CallQueuedListener\",\"command\":\"O:36:\\\"Illuminate\\\\Events\\\\CallQueuedListener\\\":19:{s:5:\\\"class\\\";s:43:\\\"App\\\\Listeners\\\\SendPurchaseConfirmationEmail\\\";s:6:\\\"method\\\";s:6:\\\"handle\\\";s:4:\\\"data\\\";a:1:{i:0;O:28:\\\"App\\\\Events\\\\PurchaseSuccesful\\\":1:{s:5:\\\"order\\\";O:45:\\\"Illuminate\\\\Contracts\\\\Database\\\\ModelIdentifier\\\":5:{s:5:\\\"class\\\";s:16:\\\"App\\\\Models\\\\Order\\\";s:2:\\\"id\\\";i:429;s:9:\\\"relations\\\";a:0:{}s:10:\\\"connection\\\";s:5:\\\"mysql\\\";s:15:\\\"collectionClass\\\";N;}}}s:5:\\\"tries\\\";N;s:13:\\\"maxExceptions\\\";N;s:7:\\\"backoff\\\";N;s:10:\\\"retryUntil\\\";N;s:7:\\\"timeout\\\";N;s:17:\\\"shouldBeEncrypted\\\";b:0;s:3:\\\"job\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:19:\\\"chainCatchCallbacks\\\";N;s:5:\\\"delay\\\";N;s:11:\\\"afterCommit\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}\"}}', 0, NULL, 1708897581, 1708897581);
 
 -- --------------------------------------------------------
 
@@ -476,7 +479,8 @@ INSERT INTO `orders` (`id`, `status`, `created_at`, `updated_at`, `SHOPPING_LIST
 (425, 'none', '2024-02-19 19:49:14', '2024-02-19 19:49:14', 617),
 (426, 'none', '2024-02-19 19:50:10', '2024-02-19 19:50:10', 619),
 (427, 'none', '2024-02-19 19:51:28', '2024-02-19 19:51:28', 621),
-(428, 'none', '2024-02-19 19:53:00', '2024-02-19 19:53:00', 623);
+(428, 'none', '2024-02-19 19:53:00', '2024-02-19 19:53:00', 623),
+(429, 'none', '2024-02-25 21:46:21', '2024-02-25 21:46:21', 632);
 
 -- --------------------------------------------------------
 
@@ -535,7 +539,6 @@ CREATE TABLE `products` (
   `name` varchar(45) DEFAULT NULL,
   `price` decimal(8,2) DEFAULT NULL,
   `status` varchar(45) DEFAULT NULL,
-  `discount_percent` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `CATEGORIES_id` int(11) DEFAULT NULL,
@@ -548,25 +551,25 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `price`, `status`, `discount_percent`, `created_at`, `updated_at`, `CATEGORIES_id`, `IMAGES_id`, `PRODUCERS_id`, `DESCRIPTIONS_id`) VALUES
-(319, 'Brokuł', 1.99, 'sold_out', NULL, '2023-12-11 14:43:33', '2024-01-05 14:47:01', 14, 326, 5, 33),
-(320, 'Pomidor', 21.99, 'sold_out', NULL, '2023-11-25 19:18:04', '2024-01-05 15:01:35', 9, 327, 5, 34),
-(321, 'Papryka zielona', 1.30, 'sold_out', NULL, '2024-01-05 14:38:00', '2024-01-05 14:38:00', 14, 328, 2, 35),
-(322, 'Marchew', 1.50, 'disable', NULL, '2024-01-05 15:05:44', '2024-01-05 15:05:44', 14, 329, 5, 36),
-(323, 'Ziemniak', 0.25, 'sold_out', NULL, '2024-01-05 15:20:04', '2024-01-05 15:20:04', 14, 330, 5, 37),
-(324, 'Coca-Cola', 3.80, 'sold_out', NULL, '2024-01-05 15:27:59', '2024-02-11 22:26:52', 15, 331, 5, 38),
-(325, 'Woda Żywiec Zdrój', 8.99, 'enable', NULL, '2024-01-06 21:07:23', '2024-01-06 22:27:55', 15, 332, 5, 39),
-(327, 'Chleb ciemny', 2.99, 'enable', NULL, '2024-01-06 21:32:51', '2024-01-06 22:39:13', 16, 334, 2, 41),
-(328, 'Chleb jasny', 1.99, 'enable', NULL, '2024-01-06 21:35:30', '2024-01-06 22:39:23', 16, 335, 2, 42),
-(329, 'Mleko 2% Mlekovita', 4.99, 'enable', NULL, '2024-01-06 21:45:39', '2024-01-06 22:40:48', 17, 336, 6, 43),
-(330, 'Mleko 3.2% Mlekovita', 3.99, 'enable', NULL, '2024-01-06 21:55:20', '2024-01-06 22:42:13', 17, 337, 6, 44),
-(331, 'Mleko 2.0% Łaciate', 2.99, 'enable', NULL, '2024-01-06 22:06:35', '2024-01-06 22:41:21', 17, 338, 7, 45),
-(332, 'Mleko 3.2% Łaciate', 2.99, 'enable', NULL, '2024-01-06 22:08:49', '2024-01-06 22:41:36', 17, 339, 7, 46),
-(334, 'Masło  Mlekovita', 3.99, 'enable', NULL, '2024-01-09 12:07:19', '2024-01-09 12:07:19', 17, 341, 6, 48),
-(335, 'Mielona wołowina', 15.99, 'enable', NULL, '2024-01-09 13:10:29', '2024-01-09 13:10:29', 20, 342, 2, 49),
-(336, 'Wołowina stek', 10.99, 'enable', NULL, '2024-01-09 13:13:16', '2024-01-09 13:13:16', 20, 343, 2, 50),
-(337, 'Pierś z kurczka', 8.99, 'enable', NULL, '2024-01-09 13:17:16', '2024-01-09 13:17:16', 20, 344, 2, 51),
-(338, 'Sałata', 4.99, 'enable', NULL, '2024-01-09 13:49:48', '2024-01-09 13:49:48', 14, 345, 2, 52);
+INSERT INTO `products` (`id`, `name`, `price`, `status`, `created_at`, `updated_at`, `CATEGORIES_id`, `IMAGES_id`, `PRODUCERS_id`, `DESCRIPTIONS_id`) VALUES
+(319, 'Brokuł', 1.98, 'sold_out', '2023-12-11 14:43:33', '2024-02-25 12:51:27', 14, 326, 5, 33),
+(320, 'Pomidor', 21.99, 'sold_out', '2023-11-25 19:18:04', '2024-01-05 15:01:35', 9, 327, 5, 34),
+(321, 'Papryka zielona', 1.30, 'sold_out', '2024-01-05 14:38:00', '2024-01-05 14:38:00', 14, 328, 2, 35),
+(322, 'Marchew', 1.50, 'disable', '2024-01-05 15:05:44', '2024-01-05 15:05:44', 14, 329, 5, 36),
+(323, 'Ziemniak', 0.25, 'sold_out', '2024-01-05 15:20:04', '2024-01-05 15:20:04', 14, 330, 5, 37),
+(324, 'Coca-Cola', 3.80, 'sold_out', '2024-01-05 15:27:59', '2024-02-11 22:26:52', 15, 331, 5, 38),
+(325, 'Woda Żywiec Zdrój', 8.99, 'enable', '2024-01-06 21:07:23', '2024-01-06 22:27:55', 15, 332, 5, 39),
+(327, 'Chleb ciemny', 2.99, 'enable', '2024-01-06 21:32:51', '2024-01-06 22:39:13', 16, 334, 2, 41),
+(328, 'Chleb jasny', 1.99, 'enable', '2024-01-06 21:35:30', '2024-01-06 22:39:23', 16, 335, 2, 42),
+(329, 'Mleko 2% Mlekovita', 4.99, 'enable', '2024-01-06 21:45:39', '2024-01-06 22:40:48', 17, 336, 6, 43),
+(330, 'Mleko 3.2% Mlekovita', 3.99, 'enable', '2024-01-06 21:55:20', '2024-01-06 22:42:13', 17, 337, 6, 44),
+(331, 'Mleko 2.0% Łaciate', 2.99, 'enable', '2024-01-06 22:06:35', '2024-01-06 22:41:21', 17, 338, 7, 45),
+(332, 'Mleko 3.2% Łaciate', 2.99, 'enable', '2024-01-06 22:08:49', '2024-01-06 22:41:36', 17, 339, 7, 46),
+(334, 'Masło  Mlekovita', 3.99, 'enable', '2024-01-09 12:07:19', '2024-01-09 12:07:19', 17, 341, 6, 48),
+(335, 'Mielona wołowina', 15.99, 'enable', '2024-01-09 13:10:29', '2024-01-09 13:10:29', 20, 342, 2, 49),
+(336, 'Wołowina stek', 10.99, 'enable', '2024-01-09 13:13:16', '2024-01-09 13:13:16', 20, 343, 2, 50),
+(337, 'Pierś z kurczka', 8.99, 'enable', '2024-01-09 13:17:16', '2024-01-09 13:17:16', 20, 344, 2, 51),
+(338, 'Sałata', 4.99, 'enable', '2024-01-09 13:49:48', '2024-01-09 13:49:48', 14, 345, 2, 52);
 
 -- --------------------------------------------------------
 
@@ -676,10 +679,12 @@ INSERT INTO `shopping_lists` (`id`, `title`, `notepad`, `total`, `mode`, `status
 (621, NULL, NULL, 8.99, 'normal', 'order', NULL, '2024-02-20 23:00:00', NULL, NULL, '2024-02-19 19:51:21', '2024-02-19 19:51:28', 72, 817),
 (623, NULL, NULL, 8.99, 'normal', 'order', NULL, '2024-02-20 23:00:00', NULL, NULL, '2024-02-19 19:52:51', '2024-02-19 19:53:00', 72, 818),
 (625, 'Twoja lista zakupów #13', NULL, 8.99, 'shopping_list', 'none', 0, NULL, NULL, NULL, '2024-02-19 19:54:37', '2024-02-19 19:55:47', 72, 820),
-(629, 'Twoja lista zakupów #15', NULL, 2.99, 'shopping_list', 'none', 0, '2024-02-25 23:00:00', '2024-02-23 23:00:00', '2024-02-24 23:00:00', '2024-02-19 20:52:02', '2024-02-19 21:34:29', 72, 826),
+(629, 'Twoja lista zakupów #15', NULL, 2.99, 'shopping_list', 'none', 1, '2024-02-25 23:00:00', '2024-02-23 23:00:00', '2024-02-24 23:00:00', '2024-02-19 20:52:02', '2024-02-25 12:49:57', 72, 826),
 (630, 'Twoja lista zakupów #14', NULL, 8.99, 'shopping_list', 'none', 0, NULL, NULL, NULL, '2024-02-19 20:54:03', '2024-02-19 20:54:08', 72, 821),
 (631, 'Twoja lista zakupów #15', NULL, 2.99, 'shopping_list', 'none', 1, '2024-02-21 23:00:00', '2024-02-19 23:00:00', '2024-02-20 23:00:00', '2024-02-19 21:36:11', '2024-02-20 09:53:04', 72, 828),
-(632, NULL, NULL, 1.99, 'normal', 'cart', NULL, NULL, NULL, NULL, '2024-02-20 11:36:23', '2024-02-20 11:36:25', 72, 830);
+(632, NULL, NULL, 1.99, 'normal', 'order', NULL, '2024-02-26 23:00:00', NULL, NULL, '2024-02-20 11:36:23', '2024-02-25 21:46:21', 72, 830),
+(633, NULL, NULL, 0.00, 'normal', 'cart', NULL, NULL, NULL, NULL, '2024-02-25 12:55:15', '2024-02-25 12:55:27', 73, NULL),
+(634, NULL, NULL, 1.99, 'normal', 'cart', NULL, NULL, NULL, NULL, '2024-02-25 21:46:31', '2024-02-25 21:46:31', 72, NULL);
 
 -- --------------------------------------------------------
 
@@ -787,7 +792,8 @@ INSERT INTO `shopping_lists_products` (`sub_total`, `quantity`, `selected`, `con
 (2.99, 1, 1, NULL, '2024-02-19 20:53:20', '2024-02-19 20:53:20', 331, 629),
 (8.99, 1, NULL, NULL, '2024-02-19 20:54:03', '2024-02-19 20:54:03', 325, 630),
 (2.99, 1, NULL, NULL, '2024-02-19 21:36:11', '2024-02-19 21:36:11', 331, 631),
-(1.99, 1, 1, NULL, '2024-02-20 11:36:23', '2024-02-20 11:36:23', 328, 632);
+(1.99, 1, 1, 1, '2024-02-20 11:36:23', '2024-02-25 21:46:21', 328, 632),
+(1.99, 1, 1, NULL, '2024-02-25 21:46:31', '2024-02-25 21:46:31', 328, 634);
 
 -- --------------------------------------------------------
 
@@ -928,7 +934,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `addresses`
 --
 ALTER TABLE `addresses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=835;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=836;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -952,7 +958,7 @@ ALTER TABLE `images`
 -- AUTO_INCREMENT for table `jobs`
 --
 ALTER TABLE `jobs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=894;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=896;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -964,7 +970,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=429;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=430;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -994,7 +1000,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `shopping_lists`
 --
 ALTER TABLE `shopping_lists`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=633;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=635;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -1033,6 +1039,13 @@ ALTER TABLE `products`
 ALTER TABLE `shopping_lists`
   ADD CONSTRAINT `fk_SHOPPING_LIST_ADDRESSES1_idx` FOREIGN KEY (`ADDRESSES_id`) REFERENCES `addresses` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_SHOPPING_LIST_USERS1` FOREIGN KEY (`USERS_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `shopping_lists_products`
+--
+ALTER TABLE `shopping_lists_products`
+  ADD CONSTRAINT `fk_SHOPPING_LISTS_PRODUCTS_PRODUCTS` FOREIGN KEY (`PRODUCTS_id`) REFERENCES `products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_SHOPPING_LISTS_PRODUCTS_SHOPPING_LISTS` FOREIGN KEY (`SHOPPING_LISTS_id`) REFERENCES `shopping_lists` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `users`
