@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 26, 2024 at 12:42 AM
+-- Generation Time: Feb 26, 2024 at 02:03 PM
 -- Wersja serwera: 10.4.28-MariaDB
 -- Wersja PHP: 8.2.4
 
@@ -121,9 +121,11 @@ INSERT INTO `addresses` (`id`, `name`, `surname`, `street`, `city`, `zip_code`, 
 (826, 'f', 'f', 'f', 'f', '33-333', 'f', NULL, 'order', '2024-02-19 21:29:22', '2024-02-19 21:29:22', 333333333, 72),
 (828, 'd', 'd', 'd', 'd', '22-222', 'd', NULL, 'order', '2024-02-20 09:13:32', '2024-02-20 09:13:32', 111111111, 72),
 (830, 'd', 'd', 'd', 'd', '22-222', 'd', NULL, 'order', '2024-02-20 11:36:25', '2024-02-20 11:36:25', 111111111, 72),
-(833, 'f', 'f', 'f', 'f', '44-444', 'ff', 0, 'none', '2024-02-21 11:51:53', '2024-02-21 12:03:36', 444444444, 72),
-(834, 'd', 'd', 'd', 'd', '22-222', 'd', 1, 'none', '2024-02-21 12:01:34', '2024-02-21 12:03:36', 222222222, 72),
-(835, 'd', 'd', 'd', 'dd', '33-333', 'd', 1, 'none', '2024-02-25 14:11:58', '2024-02-25 14:11:58', 333333333, 73);
+(833, 'f', 'f', 'f', 'f', '44-444', 'ff', 1, 'none', '2024-02-21 11:51:53', '2024-02-26 12:10:51', 444444444, 72),
+(835, 'd', 'd', 'd', 'dd', '33-333', 'd', 1, 'none', '2024-02-25 14:11:58', '2024-02-25 14:11:58', 333333333, 73),
+(836, 'd', 'd', 'd', 'd', '22-222', 'd', NULL, 'order', '2024-02-26 11:47:38', '2024-02-26 11:47:38', 222222222, 72),
+(837, 'd', 'd', 'd', 'd', '22-222', 'd', NULL, 'order', '2024-02-26 11:56:21', '2024-02-26 11:56:21', 222222222, 72),
+(838, 'dddd', 'd', 'd', 'd', '22-222', 'd', NULL, 'order', '2024-02-26 11:58:43', '2024-02-26 11:58:43', 222222222, 72);
 
 -- --------------------------------------------------------
 
@@ -151,6 +153,21 @@ INSERT INTO `categories` (`id`, `name`, `status`, `created_at`, `updated_at`) VA
 (17, 'Nabiał', 'enable', '2024-01-06 22:38:28', '2024-01-06 22:38:28'),
 (20, 'Mięsa', 'enable', '2024-01-07 23:26:33', '2024-01-07 23:26:55'),
 (21, 'd', 'enable', '2024-02-20 11:10:13', '2024-02-20 11:10:13');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `description`
+--
+
+CREATE TABLE `description` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `ingredients` varchar(255) NOT NULL,
+  `calories` varchar(45) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -380,7 +397,9 @@ INSERT INTO `jobs` (`id`, `queue`, `payload`, `attempts`, `reserved_at`, `availa
 (892, 'default', '{\"uuid\":\"03832aef-74a3-4db9-81ea-a22eb71153fe\",\"displayName\":\"App\\\\Listeners\\\\SendActivatedConfirmationEmail\",\"job\":\"Illuminate\\\\Queue\\\\CallQueuedHandler@call\",\"maxTries\":null,\"maxExceptions\":null,\"failOnTimeout\":false,\"backoff\":null,\"timeout\":null,\"retryUntil\":null,\"data\":{\"commandName\":\"Illuminate\\\\Events\\\\CallQueuedListener\",\"command\":\"O:36:\\\"Illuminate\\\\Events\\\\CallQueuedListener\\\":19:{s:5:\\\"class\\\";s:44:\\\"App\\\\Listeners\\\\SendActivatedConfirmationEmail\\\";s:6:\\\"method\\\";s:6:\\\"handle\\\";s:4:\\\"data\\\";a:1:{i:0;O:32:\\\"App\\\\Events\\\\ShoppingListActivated\\\":1:{s:13:\\\"shopping_list\\\";O:45:\\\"Illuminate\\\\Contracts\\\\Database\\\\ModelIdentifier\\\":5:{s:5:\\\"class\\\";s:24:\\\"App\\\\Models\\\\Shopping_list\\\";s:2:\\\"id\\\";i:631;s:9:\\\"relations\\\";a:0:{}s:10:\\\"connection\\\";s:5:\\\"mysql\\\";s:15:\\\"collectionClass\\\";N;}}}s:5:\\\"tries\\\";N;s:13:\\\"maxExceptions\\\";N;s:7:\\\"backoff\\\";N;s:10:\\\"retryUntil\\\";N;s:7:\\\"timeout\\\";N;s:17:\\\"shouldBeEncrypted\\\";b:0;s:3:\\\"job\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:19:\\\"chainCatchCallbacks\\\";N;s:5:\\\"delay\\\";N;s:11:\\\"afterCommit\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}\"}}', 0, NULL, 1708422721, 1708422721),
 (893, 'default', '{\"uuid\":\"0e7621d5-fc89-48c2-8802-7caf7619d6ce\",\"displayName\":\"App\\\\Listeners\\\\SendActivatedConfirmationEmail\",\"job\":\"Illuminate\\\\Queue\\\\CallQueuedHandler@call\",\"maxTries\":null,\"maxExceptions\":null,\"failOnTimeout\":false,\"backoff\":null,\"timeout\":null,\"retryUntil\":null,\"data\":{\"commandName\":\"Illuminate\\\\Events\\\\CallQueuedListener\",\"command\":\"O:36:\\\"Illuminate\\\\Events\\\\CallQueuedListener\\\":19:{s:5:\\\"class\\\";s:44:\\\"App\\\\Listeners\\\\SendActivatedConfirmationEmail\\\";s:6:\\\"method\\\";s:6:\\\"handle\\\";s:4:\\\"data\\\";a:1:{i:0;O:32:\\\"App\\\\Events\\\\ShoppingListActivated\\\":1:{s:13:\\\"shopping_list\\\";O:45:\\\"Illuminate\\\\Contracts\\\\Database\\\\ModelIdentifier\\\":5:{s:5:\\\"class\\\";s:24:\\\"App\\\\Models\\\\Shopping_list\\\";s:2:\\\"id\\\";i:631;s:9:\\\"relations\\\";a:0:{}s:10:\\\"connection\\\";s:5:\\\"mysql\\\";s:15:\\\"collectionClass\\\";N;}}}s:5:\\\"tries\\\";N;s:13:\\\"maxExceptions\\\";N;s:7:\\\"backoff\\\";N;s:10:\\\"retryUntil\\\";N;s:7:\\\"timeout\\\";N;s:17:\\\"shouldBeEncrypted\\\";b:0;s:3:\\\"job\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:19:\\\"chainCatchCallbacks\\\";N;s:5:\\\"delay\\\";N;s:11:\\\"afterCommit\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}\"}}', 0, NULL, 1708422779, 1708422779),
 (894, 'default', '{\"uuid\":\"bd5c0771-c383-4add-82df-b33cc46217a9\",\"displayName\":\"App\\\\Listeners\\\\SendActivatedConfirmationEmail\",\"job\":\"Illuminate\\\\Queue\\\\CallQueuedHandler@call\",\"maxTries\":null,\"maxExceptions\":null,\"failOnTimeout\":false,\"backoff\":null,\"timeout\":null,\"retryUntil\":null,\"data\":{\"commandName\":\"Illuminate\\\\Events\\\\CallQueuedListener\",\"command\":\"O:36:\\\"Illuminate\\\\Events\\\\CallQueuedListener\\\":19:{s:5:\\\"class\\\";s:44:\\\"App\\\\Listeners\\\\SendActivatedConfirmationEmail\\\";s:6:\\\"method\\\";s:6:\\\"handle\\\";s:4:\\\"data\\\";a:1:{i:0;O:32:\\\"App\\\\Events\\\\ShoppingListActivated\\\":1:{s:13:\\\"shopping_list\\\";O:45:\\\"Illuminate\\\\Contracts\\\\Database\\\\ModelIdentifier\\\":5:{s:5:\\\"class\\\";s:24:\\\"App\\\\Models\\\\Shopping_list\\\";s:2:\\\"id\\\";i:629;s:9:\\\"relations\\\";a:0:{}s:10:\\\"connection\\\";s:5:\\\"mysql\\\";s:15:\\\"collectionClass\\\";N;}}}s:5:\\\"tries\\\";N;s:13:\\\"maxExceptions\\\";N;s:7:\\\"backoff\\\";N;s:10:\\\"retryUntil\\\";N;s:7:\\\"timeout\\\";N;s:17:\\\"shouldBeEncrypted\\\";b:0;s:3:\\\"job\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:19:\\\"chainCatchCallbacks\\\";N;s:5:\\\"delay\\\";N;s:11:\\\"afterCommit\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}\"}}', 0, NULL, 1708865397, 1708865397),
-(895, 'default', '{\"uuid\":\"6928c36f-aae3-4e6c-bf44-60139b61d7cf\",\"displayName\":\"App\\\\Listeners\\\\SendPurchaseConfirmationEmail\",\"job\":\"Illuminate\\\\Queue\\\\CallQueuedHandler@call\",\"maxTries\":null,\"maxExceptions\":null,\"failOnTimeout\":false,\"backoff\":null,\"timeout\":null,\"retryUntil\":null,\"data\":{\"commandName\":\"Illuminate\\\\Events\\\\CallQueuedListener\",\"command\":\"O:36:\\\"Illuminate\\\\Events\\\\CallQueuedListener\\\":19:{s:5:\\\"class\\\";s:43:\\\"App\\\\Listeners\\\\SendPurchaseConfirmationEmail\\\";s:6:\\\"method\\\";s:6:\\\"handle\\\";s:4:\\\"data\\\";a:1:{i:0;O:28:\\\"App\\\\Events\\\\PurchaseSuccesful\\\":1:{s:5:\\\"order\\\";O:45:\\\"Illuminate\\\\Contracts\\\\Database\\\\ModelIdentifier\\\":5:{s:5:\\\"class\\\";s:16:\\\"App\\\\Models\\\\Order\\\";s:2:\\\"id\\\";i:429;s:9:\\\"relations\\\";a:0:{}s:10:\\\"connection\\\";s:5:\\\"mysql\\\";s:15:\\\"collectionClass\\\";N;}}}s:5:\\\"tries\\\";N;s:13:\\\"maxExceptions\\\";N;s:7:\\\"backoff\\\";N;s:10:\\\"retryUntil\\\";N;s:7:\\\"timeout\\\";N;s:17:\\\"shouldBeEncrypted\\\";b:0;s:3:\\\"job\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:19:\\\"chainCatchCallbacks\\\";N;s:5:\\\"delay\\\";N;s:11:\\\"afterCommit\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}\"}}', 0, NULL, 1708897581, 1708897581);
+(895, 'default', '{\"uuid\":\"6928c36f-aae3-4e6c-bf44-60139b61d7cf\",\"displayName\":\"App\\\\Listeners\\\\SendPurchaseConfirmationEmail\",\"job\":\"Illuminate\\\\Queue\\\\CallQueuedHandler@call\",\"maxTries\":null,\"maxExceptions\":null,\"failOnTimeout\":false,\"backoff\":null,\"timeout\":null,\"retryUntil\":null,\"data\":{\"commandName\":\"Illuminate\\\\Events\\\\CallQueuedListener\",\"command\":\"O:36:\\\"Illuminate\\\\Events\\\\CallQueuedListener\\\":19:{s:5:\\\"class\\\";s:43:\\\"App\\\\Listeners\\\\SendPurchaseConfirmationEmail\\\";s:6:\\\"method\\\";s:6:\\\"handle\\\";s:4:\\\"data\\\";a:1:{i:0;O:28:\\\"App\\\\Events\\\\PurchaseSuccesful\\\":1:{s:5:\\\"order\\\";O:45:\\\"Illuminate\\\\Contracts\\\\Database\\\\ModelIdentifier\\\":5:{s:5:\\\"class\\\";s:16:\\\"App\\\\Models\\\\Order\\\";s:2:\\\"id\\\";i:429;s:9:\\\"relations\\\";a:0:{}s:10:\\\"connection\\\";s:5:\\\"mysql\\\";s:15:\\\"collectionClass\\\";N;}}}s:5:\\\"tries\\\";N;s:13:\\\"maxExceptions\\\";N;s:7:\\\"backoff\\\";N;s:10:\\\"retryUntil\\\";N;s:7:\\\"timeout\\\";N;s:17:\\\"shouldBeEncrypted\\\";b:0;s:3:\\\"job\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:19:\\\"chainCatchCallbacks\\\";N;s:5:\\\"delay\\\";N;s:11:\\\"afterCommit\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}\"}}', 0, NULL, 1708897581, 1708897581),
+(896, 'default', '{\"uuid\":\"ff09e4e8-9aaf-4398-90a5-a8201e2da0fe\",\"displayName\":\"App\\\\Listeners\\\\SendPurchaseConfirmationEmail\",\"job\":\"Illuminate\\\\Queue\\\\CallQueuedHandler@call\",\"maxTries\":null,\"maxExceptions\":null,\"failOnTimeout\":false,\"backoff\":null,\"timeout\":null,\"retryUntil\":null,\"data\":{\"commandName\":\"Illuminate\\\\Events\\\\CallQueuedListener\",\"command\":\"O:36:\\\"Illuminate\\\\Events\\\\CallQueuedListener\\\":19:{s:5:\\\"class\\\";s:43:\\\"App\\\\Listeners\\\\SendPurchaseConfirmationEmail\\\";s:6:\\\"method\\\";s:6:\\\"handle\\\";s:4:\\\"data\\\";a:1:{i:0;O:28:\\\"App\\\\Events\\\\PurchaseSuccesful\\\":1:{s:5:\\\"order\\\";O:45:\\\"Illuminate\\\\Contracts\\\\Database\\\\ModelIdentifier\\\":5:{s:5:\\\"class\\\";s:16:\\\"App\\\\Models\\\\Order\\\";s:2:\\\"id\\\";i:430;s:9:\\\"relations\\\";a:0:{}s:10:\\\"connection\\\";s:5:\\\"mysql\\\";s:15:\\\"collectionClass\\\";N;}}}s:5:\\\"tries\\\";N;s:13:\\\"maxExceptions\\\";N;s:7:\\\"backoff\\\";N;s:10:\\\"retryUntil\\\";N;s:7:\\\"timeout\\\";N;s:17:\\\"shouldBeEncrypted\\\";b:0;s:3:\\\"job\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:19:\\\"chainCatchCallbacks\\\";N;s:5:\\\"delay\\\";N;s:11:\\\"afterCommit\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}\"}}', 0, NULL, 1708948061, 1708948061),
+(897, 'default', '{\"uuid\":\"50edd2d8-e1e5-4309-b9f5-671787fa62c3\",\"displayName\":\"App\\\\Listeners\\\\SendPurchaseConfirmationEmail\",\"job\":\"Illuminate\\\\Queue\\\\CallQueuedHandler@call\",\"maxTries\":null,\"maxExceptions\":null,\"failOnTimeout\":false,\"backoff\":null,\"timeout\":null,\"retryUntil\":null,\"data\":{\"commandName\":\"Illuminate\\\\Events\\\\CallQueuedListener\",\"command\":\"O:36:\\\"Illuminate\\\\Events\\\\CallQueuedListener\\\":19:{s:5:\\\"class\\\";s:43:\\\"App\\\\Listeners\\\\SendPurchaseConfirmationEmail\\\";s:6:\\\"method\\\";s:6:\\\"handle\\\";s:4:\\\"data\\\";a:1:{i:0;O:28:\\\"App\\\\Events\\\\PurchaseSuccesful\\\":1:{s:5:\\\"order\\\";O:45:\\\"Illuminate\\\\Contracts\\\\Database\\\\ModelIdentifier\\\":5:{s:5:\\\"class\\\";s:16:\\\"App\\\\Models\\\\Order\\\";s:2:\\\"id\\\";i:431;s:9:\\\"relations\\\";a:0:{}s:10:\\\"connection\\\";s:5:\\\"mysql\\\";s:15:\\\"collectionClass\\\";N;}}}s:5:\\\"tries\\\";N;s:13:\\\"maxExceptions\\\";N;s:7:\\\"backoff\\\";N;s:10:\\\"retryUntil\\\";N;s:7:\\\"timeout\\\";N;s:17:\\\"shouldBeEncrypted\\\";b:0;s:3:\\\"job\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:19:\\\"chainCatchCallbacks\\\";N;s:5:\\\"delay\\\";N;s:11:\\\"afterCommit\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}\"}}', 0, NULL, 1708948587, 1708948587);
 
 -- --------------------------------------------------------
 
@@ -480,7 +499,9 @@ INSERT INTO `orders` (`id`, `status`, `created_at`, `updated_at`, `SHOPPING_LIST
 (426, 'none', '2024-02-19 19:50:10', '2024-02-19 19:50:10', 619),
 (427, 'none', '2024-02-19 19:51:28', '2024-02-19 19:51:28', 621),
 (428, 'none', '2024-02-19 19:53:00', '2024-02-19 19:53:00', 623),
-(429, 'none', '2024-02-25 21:46:21', '2024-02-25 21:46:21', 632);
+(429, 'none', '2024-02-25 21:46:21', '2024-02-25 21:46:21', 632),
+(430, 'none', '2024-02-26 11:47:41', '2024-02-26 11:47:41', 634),
+(431, 'none', '2024-02-26 11:56:27', '2024-02-26 11:56:27', 635);
 
 -- --------------------------------------------------------
 
@@ -684,7 +705,9 @@ INSERT INTO `shopping_lists` (`id`, `title`, `notepad`, `total`, `mode`, `status
 (631, 'Twoja lista zakupów #15', NULL, 2.99, 'shopping_list', 'none', 1, '2024-02-21 23:00:00', '2024-02-19 23:00:00', '2024-02-20 23:00:00', '2024-02-19 21:36:11', '2024-02-20 09:53:04', 72, 828),
 (632, NULL, NULL, 1.99, 'normal', 'order', NULL, '2024-02-26 23:00:00', NULL, NULL, '2024-02-20 11:36:23', '2024-02-25 21:46:21', 72, 830),
 (633, NULL, NULL, 0.00, 'normal', 'cart', NULL, NULL, NULL, NULL, '2024-02-25 12:55:15', '2024-02-25 12:55:27', 73, NULL),
-(634, NULL, NULL, 1.99, 'normal', 'cart', NULL, NULL, NULL, NULL, '2024-02-25 21:46:31', '2024-02-25 21:46:31', 72, NULL);
+(634, NULL, NULL, 1.99, 'normal', 'order', NULL, '2024-02-27 23:00:00', NULL, NULL, '2024-02-25 21:46:31', '2024-02-26 11:47:41', 72, 836),
+(635, NULL, NULL, 2.99, 'normal', 'order', NULL, '2024-02-27 23:00:00', NULL, NULL, '2024-02-26 11:47:53', '2024-02-26 11:56:27', 72, 837),
+(636, 'Twoja lista zakupów #16', NULL, 8.99, 'shopping_list', 'none', 0, '2024-03-03 23:00:00', '2024-03-01 23:00:00', '2024-03-02 23:00:00', '2024-02-26 11:58:38', '2024-02-26 11:58:57', 72, 838);
 
 -- --------------------------------------------------------
 
@@ -793,7 +816,9 @@ INSERT INTO `shopping_lists_products` (`sub_total`, `quantity`, `selected`, `con
 (8.99, 1, NULL, NULL, '2024-02-19 20:54:03', '2024-02-19 20:54:03', 325, 630),
 (2.99, 1, NULL, NULL, '2024-02-19 21:36:11', '2024-02-19 21:36:11', 331, 631),
 (1.99, 1, 1, 1, '2024-02-20 11:36:23', '2024-02-25 21:46:21', 328, 632),
-(1.99, 1, 1, NULL, '2024-02-25 21:46:31', '2024-02-25 21:46:31', 328, 634);
+(1.99, 1, 1, 1, '2024-02-25 21:46:31', '2024-02-26 11:47:41', 328, 634),
+(2.99, 1, 1, 1, '2024-02-26 11:47:53', '2024-02-26 11:56:27', 327, 635),
+(8.99, 1, 1, NULL, '2024-02-26 11:58:38', '2024-02-26 11:58:38', 337, 636);
 
 -- --------------------------------------------------------
 
@@ -806,9 +831,6 @@ CREATE TABLE `users` (
   `email` varchar(250) NOT NULL,
   `password` varchar(250) NOT NULL,
   `name` varchar(250) DEFAULT NULL,
-  `surname` varchar(250) DEFAULT NULL,
-  `pesel` varchar(250) DEFAULT NULL,
-  `age` varchar(45) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `ROLES_id` int(11) NOT NULL
@@ -818,12 +840,12 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `password`, `name`, `surname`, `pesel`, `age`, `created_at`, `updated_at`, `ROLES_id`) VALUES
-(72, 'grzegorz.p.knapik@gmail.com', '$2y$10$a88cB5dUEMAPB3hsprNfiOFqi9ivqP7SZPMUNJ8/v38oDmc/sJNM6', 'Grzegorz', NULL, NULL, NULL, '2023-12-12 11:32:56', '2023-12-12 11:32:56', 4),
-(73, 'grzesiek2001@interia.pl', '$2y$10$SS5YAMxY76CwdBcimQ/UtewENi6gDFEIrwON0YowVpafiPYxT51Uq', 'tt', NULL, NULL, NULL, '2023-12-18 20:09:36', '2023-12-18 20:09:36', 5),
-(74, 'm@m', '$2y$10$gT.ZSTaDzF09vOz7w7w/COqMvXYmJ3qPmlMgeuaOHiwfCT0jGjeGS', 'd', NULL, NULL, NULL, '2023-12-20 12:13:44', '2023-12-20 12:13:44', 3),
-(75, 'm@mm', '$2y$10$FVwJsVx86/Y1WqsZYM.7SO3NKDV02kIxl8buFaRdNisePYEMyftfm', 'tt', NULL, NULL, NULL, '2024-02-14 11:16:35', '2024-02-14 11:16:35', 3),
-(76, 'u@u', '$2y$10$jzQ3zn7uznR0nbkW2h1lHedt0KubRZVvw5emuM3esL2MOlUN59cme', 'rr', NULL, NULL, NULL, '2024-02-20 11:43:55', '2024-02-21 17:04:39', 3);
+INSERT INTO `users` (`id`, `email`, `password`, `name`, `created_at`, `updated_at`, `ROLES_id`) VALUES
+(72, 'grzegorz.p.knapik@gmail.com', '$2y$10$a88cB5dUEMAPB3hsprNfiOFqi9ivqP7SZPMUNJ8/v38oDmc/sJNM6', 'Grzegorz', '2023-12-12 11:32:56', '2023-12-12 11:32:56', 4),
+(73, 'grzesiek2001@interia.pl', '$2y$10$SS5YAMxY76CwdBcimQ/UtewENi6gDFEIrwON0YowVpafiPYxT51Uq', 'tt', '2023-12-18 20:09:36', '2023-12-18 20:09:36', 5),
+(74, 'm@m', '$2y$10$gT.ZSTaDzF09vOz7w7w/COqMvXYmJ3qPmlMgeuaOHiwfCT0jGjeGS', 'd', '2023-12-20 12:13:44', '2023-12-20 12:13:44', 3),
+(75, 'm@mm', '$2y$10$FVwJsVx86/Y1WqsZYM.7SO3NKDV02kIxl8buFaRdNisePYEMyftfm', 'tt', '2024-02-14 11:16:35', '2024-02-14 11:16:35', 3),
+(76, 'u@u', '$2y$10$jzQ3zn7uznR0nbkW2h1lHedt0KubRZVvw5emuM3esL2MOlUN59cme', 'rr', '2024-02-20 11:43:55', '2024-02-21 17:04:39', 3);
 
 --
 -- Indeksy dla zrzutów tabel
@@ -840,6 +862,12 @@ ALTER TABLE `addresses`
 -- Indeksy dla tabeli `categories`
 --
 ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `description`
+--
+ALTER TABLE `description`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -934,13 +962,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `addresses`
 --
 ALTER TABLE `addresses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=836;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=839;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT for table `description`
+--
+ALTER TABLE `description`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `descriptions`
@@ -958,7 +992,7 @@ ALTER TABLE `images`
 -- AUTO_INCREMENT for table `jobs`
 --
 ALTER TABLE `jobs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=896;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=898;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -970,7 +1004,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=430;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=432;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -1000,7 +1034,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `shopping_lists`
 --
 ALTER TABLE `shopping_lists`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=635;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=637;
 
 --
 -- AUTO_INCREMENT for table `users`
